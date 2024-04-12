@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 
 
 function AutoComplete({placeholder="autocomplete", 
+  label="Autocomplete",
   single=false,
   errorText,
   getOptions, 
@@ -34,7 +35,7 @@ function AutoComplete({placeholder="autocomplete",
  
   return (
     <div className="App" >
-      <h2>Autocomplete</h2>
+      <span>{label}</span>
       {errorText && <div class="error-text">{errorText}</div>}
       <input type="text" 
       className={"input-box "+(errorText && "input-box-error")}
