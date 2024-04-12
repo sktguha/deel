@@ -8,3 +8,16 @@
   color: red;
   text-align: left;
 }
+
+.available-options-to-select{
+  z-index: 9999;
+}
+
+.main-container {
+  margin-left: 20%;
+  padding-bottom: 20%;
+}
+
+section {
+  margin-bottom: 200px;
+}

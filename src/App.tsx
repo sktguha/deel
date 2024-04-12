@@ -5,6 +5,7 @@ import { Driver } from "./components/Driver";
 
 export default function App(){
   return <div className="main-container">
+    <h2>Autocomplete Demo ( 6 use cases) type "h" or "he" to get results</h2>
     <section>
       <h2>Base example</h2>
       <Driver />

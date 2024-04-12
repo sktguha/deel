@@ -49,7 +49,7 @@ export function AutoComplete({
             const text = e.target.value;
             console.log(text);
             console.log(options);
-            const availOptions = options.filter(option => option.label.indexOf(text) !== -1);
+            const availOptions = options.filter(option => option.label.toLowerCase().indexOf(text.toLowerCase()) !== -1);
             console.log(availOptions);
             setAvailableOptions(availOptions);
             showItems();
