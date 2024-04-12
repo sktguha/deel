@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AutoComplete } from "./AutoComplete";
 
-export function Driver({single ,required, errorTextProp, maxDisplayItems, api}) {
+export function Driver({single ,required, errorTextProp, maxDisplayItems, api, label}) {
   const defaultOptions = [{
     label: "Hello",
     id: 1
@@ -18,7 +18,7 @@ export function Driver({single ,required, errorTextProp, maxDisplayItems, api}) 
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [errorText, setErrorText] = useState(required ? "This is a required field" : false);
   const getOptionsLocal = (text) => new Promise((res) => setTimeout(() => res(defaultOptions), Math.random() * 2500));
-  const getOptionsApi = (text) => fetch('https://jsonplaceholder.typicode.com/posts?userId='+text)
+  const getOptionsApi = (text) => fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response) => response.json())
   .then((json) => {
     console.log("jsonmock returns: ", json);
@@ -29,7 +29,7 @@ export function Driver({single ,required, errorTextProp, maxDisplayItems, api}) 
       }
     })
   });
-  return <AutoComplete maxDisplayItems={maxDisplayItems} errorText={errorTextProp || errorText} single={single} selectedOptions={selectedOptions}
+  return <AutoComplete label={label} maxDisplayItems={maxDisplayItems} errorText={errorTextProp || errorText} single={single} selectedOptions={selectedOptions}
     getOptions={api?getOptionsApi:getOptionsLocal}
     onSelectedOptionsChange={(options) => {
       console.log("new options is ", options);

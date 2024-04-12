@@ -11,7 +11,7 @@ export default function App(){
     </section>
     <section>
       <h2>Base example multi selection with jsonmock API integration , loading states , maxlimit increased</h2>
-      <Driver maxDisplayItems={18} api/>
+      <Driver label={"Autocomplete: Enter to search across posts"} maxDisplayItems={18} api/>
     </section>
     <section>
       <h2>Base example multi selection allowed</h2>

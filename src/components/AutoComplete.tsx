@@ -9,12 +9,11 @@ export function AutoComplete({
   getOptions,
   maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange }) {
   const [availableOptions, setAvailableOptions] = useState([]);
-  const [text, setText] = useState("");
 
   const inputRef = useRef();
   const itemsRef = useRef();
 
-  function showItems(noFocus) {
+  function showItems() {
     itemsRef.current.style.display = "block";
     // inputRef.current.focus();
     // if(!noFocus) itemsRef.current.focus();
@@ -45,14 +44,13 @@ export function AutoComplete({
           }, 300);
         }} tabIndex={-1}
         ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={(e) => {
-          getOptions(text).then((options) => {
+          getOptions(e.target.value).then((options) => {
             // setLoading(false)
             const text = e.target.value;
             console.log(text);
             console.log(options);
             const availOptions = options.filter(option => option.label.indexOf(text) !== -1);
             console.log(availOptions);
-            setText(text);
             setAvailableOptions(availOptions);
             showItems();
           }, (err) => {
