@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
 
 export function AutoComplete({
-  placeholder = "autocomplete",
+  placeholder = "autocomplete demo",
   label = "Autocomplete",
   single = false,
   errorText,

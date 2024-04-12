@@ -4,6 +4,13 @@
 .input-box-error{
   border: 2px solid red;
 }
+
+.input-box {
+  border-radius: 4px;
+  width: 300px;
+  height: 30px;
+}
+
 .error-text {
   color: red;
   text-align: left;
@@ -11,6 +18,8 @@
 
 .available-options-to-select{
   z-index: 9999;
+  position: relative;
+  max-width: 300px;
 }
 
 .main-container {
