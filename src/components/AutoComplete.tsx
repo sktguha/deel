@@ -36,7 +36,7 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
           console.log("body blur");
           setTimeout(() => { 
             itemsRef.current.style.display = "none"
-          }, 2000);
+          }, 300);
         }} tabIndex={-1}
         ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={(e) => {
           getOptions(text).then((options) => {
@@ -64,7 +64,7 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
         })}
       </div>
       <div onClick={()=>{
-        alert("onclick");
+        // alert("onclick");
       }}>
       <ItemsDisplay {...{ itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef }}/>
       </div>

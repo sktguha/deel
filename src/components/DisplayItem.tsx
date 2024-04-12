@@ -3,7 +3,7 @@ export function DisplayItem({selectedOptions, option, onSelectedOptionsChange, g
   return (<div
     style={{ cursor: "pointer" }}
     onClick={() => {
-      alert(option.label);
+      // alert(option.label);
       if (selectedOptions.find(sOption => sOption.id === option.id)) {
         return;
       }
