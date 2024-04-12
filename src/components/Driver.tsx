@@ -18,8 +18,16 @@ export function Driver({single ,required, errorTextProp, maxDisplayItems, api}) 
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [errorText, setErrorText] = useState(required ? "This is a required field" : false);
   const getOptionsLocal = (text) => new Promise((res) => setTimeout(() => res(defaultOptions), Math.random() * 2500));
-  const getOptionsApi = (text) => new Promise((res) => {
-    
+  const getOptionsApi = (text) => fetch('https://jsonplaceholder.typicode.com/posts?userId='+text)
+  .then((response) => response.json())
+  .then((json) => {
+    console.log("jsonmock returns: ", json);
+    return json.map((elem)=>{
+      return {
+        id:elem.id,
+        label: elem.title
+      }
+    })
   });
   return <AutoComplete maxDisplayItems={maxDisplayItems} errorText={errorTextProp || errorText} single={single} selectedOptions={selectedOptions}
     getOptions={api?getOptionsApi:getOptionsLocal}
