@@ -7,7 +7,7 @@ export function ItemsDisplay({
   return (<div className="available-options-to-select" ref={itemsRef}>
     {
     availableOptions.slice(0, maxDisplayItems).map(
-    option => <DisplayItem{...{selectedOptions, option, onSelectedOptionsChange, getBoldedText, inputRef}}/>
+    option => <DisplayItem key={option.id} {...{selectedOptions, option, onSelectedOptionsChange, getBoldedText, inputRef}}/>
     )
 }
   </div>);

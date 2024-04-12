@@ -17,7 +17,6 @@ export function Driver() {
   ];
   const [selectedOptions, setSelectedOptions] = useState([]);
   return <AutoComplete selectedOptions={selectedOptions}
-    errorText="This is a required field"
     getOptions={(text) => new Promise((res) => setTimeout(() => res(defaultOptions), Math.random() * 2500))}
     onSelectedOptionsChange={(options) => {
       console.log("new options is ", options);

@@ -26,15 +26,17 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
 
   return (
     <div className="App">
-      <span>{label}</span>
-      {errorText && <div class="error-text">{errorText}</div>}
+      <div>{label}</div>
+      {errorText && <div className="error-text">{errorText}</div>}
       <input type="text"
         className={"input-box " + (errorText && "input-box-error")}
         disabled={single && selectedOptions.length >= 1}
         onBlur={(e) => {
           console.log(e);
           console.log("body blur");
-          setTimeout(() => itemsRef.current.style.display = "none", 100);
+          setTimeout(() => { 
+            itemsRef.current.style.display = "none"
+          }, 2000);
         }} tabIndex={-1}
         ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={(e) => {
           getOptions(text).then((options) => {
@@ -61,7 +63,11 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
           </div>);
         })}
       </div>
+      <div onClick={()=>{
+        alert("onclick");
+      }}>
       <ItemsDisplay {...{ itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef }}/>
+      </div>
       {/* {ItemsDisplay(itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef)} */}
     </div>
   );
