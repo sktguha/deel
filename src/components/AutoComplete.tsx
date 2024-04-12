@@ -1,7 +1,13 @@
 import { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
 
-export function AutoComplete({ placeholder = "autocomplete", label = "Autocomplete", single = false, errorText, getOptions, maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange }) {
+export function AutoComplete({
+  placeholder = "autocomplete",
+  label = "Autocomplete",
+  single = false,
+  errorText,
+  getOptions,
+  maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange }) {
   const [availableOptions, setAvailableOptions] = useState([]);
   const [text, setText] = useState("");
 
@@ -34,7 +40,7 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
         onBlur={(e) => {
           console.log(e);
           console.log("body blur");
-          setTimeout(() => { 
+          setTimeout(() => {
             itemsRef.current.style.display = "none"
           }, 300);
         }} tabIndex={-1}
@@ -63,10 +69,10 @@ export function AutoComplete({ placeholder = "autocomplete", label = "Autocomple
           </div>);
         })}
       </div>
-      <div onClick={()=>{
+      <div onClick={() => {
         // alert("onclick");
       }}>
-      <ItemsDisplay {...{ itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef }}/>
+        <ItemsDisplay {...{ itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef }} />
       </div>
       {/* {ItemsDisplay(itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef)} */}
     </div>
