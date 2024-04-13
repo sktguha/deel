@@ -26,7 +26,7 @@ b) Thus it creates a performance problem in the app and makes it harder to reaso
 PARENT.
 
 **ANSWER:**<br>
-Three ways can be ,
+Three ways can be ,<br>
 a) Passing through a callback prop, like in my component example , the component can call a callback function with some data
 
 b) Through state management solutions such as Redux, Mobx, xstate. In such cases its more powerful as the information can passed centrally to any component
@@ -50,9 +50,11 @@ They also help in a smaller DOM size which is useful for speed and efficiency .
 
 So there is an edge case where using a fragment can break an app
 if there is a code like:
+`
 options.map((option)=>{
   return <><span>{option.title}</span><span>{option.name}</span></>
 })
+`
 
 Here if the option.title is undefined then React won't be able to find the key for the fragment, as it depends on the first child to find the key. Thus it is important to add a key prop in such cases
 
@@ -64,6 +66,8 @@ Here if the option.title is undefined then React won't be able to find the key f
 a) withAuthentication:
 
 A common use case for HOCs is handling authentication-related logic. we can create an withAuthentication HOC that wraps a component and ensures that it's only rendered when the user is authenticated. If the user is not authenticated, the HOC can redirect them to a login page.
+
+
 
 b) Another example is creating an HOC that displays a loading indicator while data is being fetched asynchronously. This HOC can manage the loading state internally and render a loading spinner or message until the data is available. This is generally used in Redux state management using connect HOC of Redux, the API call is made by middleware, and the loading state change is done via the reducers
 
@@ -94,9 +98,9 @@ A setState is async because React batches the multiple state updates into a sing
 Component.
 
 **ANSWER:**<br>
-This is not an exhaustive list but I will try to list down the major steps
-a) Create new functional component with same name as the class one.
-b) The logic in render method can be copied as the return value of the class component
+This is not an exhaustive list but I will try to list down the major steps<br>
+a) Create new functional component with same name as the class one.<br>
+b) The logic in render method can be copied as the return value of the class component<br>
 c) Then the setState calls need to be converted to functional useState calls. Although we can mirror the class setState and keep all our state in a single object, but React functional component design suggests to keep the setState calls seperate
 
 d) Convert the props of class components into the arguments of functional components
