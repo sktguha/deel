@@ -1,9 +1,9 @@
 import React from 'react';
-import { AutoComplete } from "../AutoComplete"
+import { Driver } from "../Driver"
 import { render , screen } from '@testing-library/react';
 
 
-test("Autocomplete base",()=>{
-    const { container } = render(<AutoComplete />)
+test("Driver base",()=>{
+    const { container } = render(<Driver />)
     expect(container).toMatchSnapshot();
 })
