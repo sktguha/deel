@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
+import loader from "../loader.gif"
 
 export function AutoComplete({
   placeholder = "autocomplete demo",
@@ -9,6 +10,7 @@ export function AutoComplete({
   getOptions,
   maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange }) {
   const [availableOptions, setAvailableOptions] = useState([]);
+  const [loading, setLoading ] = useState(false);
 
   const inputRef = useRef();
   const itemsRef = useRef();
@@ -33,6 +35,7 @@ export function AutoComplete({
     <div className="App">
       <div>{label}</div>
       {errorText && <div className="error-text">{errorText}</div>}
+      <div className="input-container">
       <input type="text"
         className={"input-box " + (errorText && "input-box-error")}
         disabled={single && selectedOptions.length >= 1}
@@ -44,8 +47,9 @@ export function AutoComplete({
           }, 300);
         }} tabIndex={-1}
         ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={(e) => {
+          setLoading(true);
           getOptions(e.target.value).then((options) => {
-            // setLoading(false)
+            setLoading(false)
             const text = e.target.value;
             console.log(text);
             console.log(options);
@@ -58,6 +62,8 @@ export function AutoComplete({
             console.error("error occured: ", err);
           });
         }} />
+        {loading && <img width="33" height="33" src={loader} />}
+      </div>
       {/* {JSON.stringify(selectedOptions)} */}
       <div className="selected-options">
         {selectedOptions.map((option) => {
