@@ -9,3 +9,7 @@ export interface AutoCompletePropTypes {
   label: string;
   placeholder: string;
 }
+export interface MenuItem {
+    label: string;
+    id: string
+}
