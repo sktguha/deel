@@ -11,7 +11,7 @@ One way of course is to update the todos[] reference itself, like [newTodo, ...t
 Thus it is not advisable to use blindly pureComponent, as it may break the app.
 
 **Q2.:** Context + ShouldComponentUpdate might be dangerous. Why is
-that?
+that?<br>
 **ANSWER:**<br>
 So Context + ShouldComponentUpdate combination can be risky in the sense of making the app complex and bloated and still remaining inefficient in terms of multiple rerenders
 
