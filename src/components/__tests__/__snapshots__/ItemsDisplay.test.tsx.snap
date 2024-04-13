@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsDisplay base 1`] = `
+<div>
+  <div
+    class="available-options-to-select"
+  >
+    <div
+      class="menu-item menu-item-last"
+      style="cursor: pointer;"
+    >
+      <div>
+        <b>
+          te
+        </b>
+        st
+      </div>
+    </div>
+  </div>
+</div>
+`;
