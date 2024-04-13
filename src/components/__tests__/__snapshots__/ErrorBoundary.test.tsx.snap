@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorBoundary base 1`] = `<div />`;
+
+exports[`ErrorBoundary error component 1`] = `
+<div>
+  <h2>
+    Something went wrong in Autocomplete component. please try again
+  </h2>
+</div>
+`;
