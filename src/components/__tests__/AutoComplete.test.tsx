@@ -1,5 +1,5 @@
 import React from 'react';
-import { AutoComplete } from "../../types/AutoComplete"
+import { AutoComplete } from "../AutoComplete"
 import { render , screen } from '@testing-library/react';
 
 

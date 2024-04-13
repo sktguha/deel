@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
-import { ItemsDisplay } from "../components/ItemsDisplay";
+import { ItemsDisplay } from "./ItemsDisplay";
 import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
 import debounce from "../utils/debounce";
-import ErrorBoundary from "../components/ErrorBoundary";
-import { AutoCompletePropTypes } from "../components/AutoComplete.types";
+import ErrorBoundary from "./ErrorBoundary";
+import { AutoCompletePropTypes } from "../types/Proptypestypes.";
 
 
 

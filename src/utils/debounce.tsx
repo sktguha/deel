@@ -1,4 +1,4 @@
-import { genericFn } from "../components/AutoComplete.types";
+import { genericFn } from "../types/Common.types";
 
 export default function debounce(func: genericFn, timeout = 300) {
     let timer: number;

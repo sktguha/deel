@@ -1,4 +1,6 @@
-export type genericFn = (...args: any[])=>any
+import { genericFn } from "./Common.types";
+import { MenuItem } from "./Common.types";
+
 export interface AutoCompletePropTypes {
   errorText: string;
   single: Boolean;
@@ -8,11 +10,6 @@ export interface AutoCompletePropTypes {
   selectedOptions: any[];
   label: string;
   placeholder?: string;
-}
-
-export interface MenuItem {
-    label: string;
-    id: string
 }
 
 export interface DisplayItemPropTypes {

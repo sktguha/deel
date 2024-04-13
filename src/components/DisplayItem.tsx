@@ -1,4 +1,4 @@
-import { DisplayItemPropTypes } from "./AutoComplete.types";
+import { DisplayItemPropTypes } from "../types/Proptypestypes.";
 
 export function DisplayItem(
   {

@@ -1,4 +1,5 @@
-import { MenuItem, genericFn } from "./AutoComplete.types";
+import { genericFn } from "../types/Common.types";
+import { MenuItem } from "../types/Common.types";
 import { DisplayItem } from "./DisplayItem";
 
 interface ItemsDisplayPropTypes {
