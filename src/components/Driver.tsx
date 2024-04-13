@@ -31,7 +31,7 @@ export function Driver({ single, required, errorTextProp, maxDisplayItems, api, 
         }
       })
     });
-  return <AutoComplete label={label} maxDisplayItems={maxDisplayItems} errorText={errorTextProp || errorText} single={single} selectedOptions={selectedOptions}
+  return <AutoComplete label={label} maxDisplayItems={maxDisplayItems} errorText={errorTextProp || errorText as string} single={single} selectedOptions={selectedOptions}
     getOptions={api ? getOptionsApi : getOptionsLocal}
     onSelectedOptionsChange={(options) => {
       console.log("new options is ", options);
