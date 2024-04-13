@@ -3,15 +3,15 @@ import { AutoComplete } from "./AutoComplete";
 
 export function Driver({single ,required, errorTextProp, maxDisplayItems, api, label}) {
   const defaultOptions = [{
-    label: "Hello",
+    label: "hello",
     id: 1
   },
   {
-    label: "Help",
+    label: "help",
     id: 2
   },
   {
-    label: "Helldivers",
+    label: "helldivers",
     id: 3
   }
   ];
