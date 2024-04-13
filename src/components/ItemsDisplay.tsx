@@ -1,8 +1,19 @@
+import { MenuItem, genericFn } from "./AutoComplete.types";
 import { DisplayItem } from "./DisplayItem";
+
+interface ItemsDisplayPropTypes {
+  itemsRef: any;
+  availableOptions: MenuItem[];
+  maxDisplayItems: number;
+  selectedOptions: MenuItem[];
+  onSelectedOptionsChange: genericFn;
+  getBoldedText: genericFn;
+  inputRef: any;
+}
 
 export function ItemsDisplay({
   itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText,
-  inputRef }) {
+  inputRef }: ItemsDisplayPropTypes) {
   const availableOptionsLimit = availableOptions.slice(0, maxDisplayItems);
   return (<div className="available-options-to-select" ref={itemsRef}>
     {
