@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Getting Started with Autocomplete
+
+Please refer to the loom video for demo and detailed code structure walkthrough: 
+
+https://www.loom.com/share/29a6e6a9b472479a9522a1fcfb10c00e?sid=529974c5-ec74-41a0-aa3c-3f3f05bb6e32
+
+For the answers please refer questions.md
+
+To run the project please use standard commands as `npm start` to start, `npm test` to run tests using jest
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
