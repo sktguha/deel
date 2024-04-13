@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayItem base 1`] = `
+<div>
+  <div
+    class="menu-item undefined"
+    style="cursor: pointer;"
+  >
+    <div>
+      <b>
+        te
+      </b>
+      st
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayItem last item 1`] = `
+<div>
+  <div
+    class="menu-item menu-item-last"
+    style="cursor: pointer;"
+  >
+    <div>
+      <b>
+        te
+      </b>
+      st
+    </div>
+  </div>
+</div>
+`;
