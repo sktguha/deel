@@ -58,7 +58,7 @@ export function AutoComplete({
               setLoading(true);
               getOptions((e.target as unknown as {"value": any}).value).then((options: any[]) => {
                 setLoading(false)
-                const text = (e.target as unknown as {"value": any});
+                const text = (e.target as unknown as {"value": any}).value;
                 console.log(text);
                 console.log(options);
                 const availOptions = options.filter(option => option.label.toLowerCase().indexOf(text.toLowerCase()) !== -1);
