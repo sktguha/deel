@@ -59,9 +59,9 @@ export function AutoComplete({
           });
         }} />
       {/* {JSON.stringify(selectedOptions)} */}
-      <div className="selected-options" style={{ backgroundColor: "light-blue" }}>
+      <div className="selected-options">
         {selectedOptions.map((option) => {
-          return (<div key={option.id} style={{ backgroundColor: "blue", marginRight: "5px", display: "inline-block" }}>
+          return (<div key={option.id} className="pill-item">
             <span>{option.label}</span>
             <span onClick={() => removeOption(option.id)}> x</span>
           </div>);
