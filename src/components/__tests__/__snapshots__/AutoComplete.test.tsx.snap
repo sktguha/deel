@@ -29,3 +29,103 @@ exports[`Autocomplete base 1`] = `
   </div>
 </div>
 `;
+
+exports[`Autocomplete errorText 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="error-text"
+    >
+      custom errorText for test
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box input-box-error"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Autocomplete required 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="error-text"
+    >
+      this is a required field
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box input-box-error"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Autocomplete single prop 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box undefined"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
