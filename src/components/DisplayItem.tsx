@@ -1,4 +1,4 @@
-import { DisplayItemPropTypes } from "../types/Proptypestypes.";
+import { DisplayItemPropTypes } from "../types/Proptypes.types.";
 
 export function DisplayItem(
   {

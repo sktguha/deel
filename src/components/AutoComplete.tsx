@@ -4,7 +4,7 @@ import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
 import debounce from "../utils/debounce";
 import ErrorBoundary from "./ErrorBoundary";
-import { AutoCompletePropTypes } from "../types/Proptypestypes.";
+import { AutoCompletePropTypes } from "../types/Proptypes.types.";
 
 
 
