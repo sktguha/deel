@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
 import loader from "../loader.gif"
+import getBoldedText from "../utils/getBoldedText";
 
 export function AutoComplete({
   placeholder = "autocomplete demo",
@@ -19,12 +20,6 @@ export function AutoComplete({
     itemsRef.current.style.display = "block";
     // inputRef.current.focus();
     // if(!noFocus) itemsRef.current.focus();
-  }
-
-  function getBoldedText(label, text) {
-    return <div dangerouslySetInnerHTML={{
-      __html: label.split(text).join("<b>" + text + "</b>")
-    }} />;
   }
 
   function removeOption(idToRemove) {
