@@ -31,3 +31,35 @@ exports[`DisplayItem last item 1`] = `
   </div>
 </div>
 `;
+
+exports[`DisplayItem multiple options 1`] = `
+<div>
+  <div
+    class="menu-item menu-item-last"
+    style="cursor: pointer;"
+  >
+    <div>
+      <b>
+        te
+      </b>
+      st2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayItem multiple options last item 1`] = `
+<div>
+  <div
+    class="menu-item menu-item-last"
+    style="cursor: pointer;"
+  >
+    <div>
+      <b>
+        te
+      </b>
+      st2
+    </div>
+  </div>
+</div>
+`;

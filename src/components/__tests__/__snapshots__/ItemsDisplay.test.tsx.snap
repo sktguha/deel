@@ -19,3 +19,34 @@ exports[`ItemsDisplay base 1`] = `
   </div>
 </div>
 `;
+
+exports[`ItemsDisplay multiple options 1`] = `
+<div>
+  <div
+    class="available-options-to-select"
+  >
+    <div
+      class="menu-item false"
+      style="cursor: pointer;"
+    >
+      <div>
+        <b>
+          te
+        </b>
+        st
+      </div>
+    </div>
+    <div
+      class="menu-item menu-item-last"
+      style="cursor: pointer;"
+    >
+      <div>
+        <b>
+          te
+        </b>
+        st2
+      </div>
+    </div>
+  </div>
+</div>
+`;
