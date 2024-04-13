@@ -1,6 +1,7 @@
 
-export function DisplayItem({selectedOptions, option, onSelectedOptionsChange, getBoldedText, inputRef}) {
+export function DisplayItem({selectedOptions, isLast, option, onSelectedOptionsChange, getBoldedText, inputRef}) {
   return (<div
+    className={"menu-item " + (isLast && "menu-item-last")}
     style={{ cursor: "pointer" }}
     onClick={() => {
       // alert(option.label);
