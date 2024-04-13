@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete base 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box undefined"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
