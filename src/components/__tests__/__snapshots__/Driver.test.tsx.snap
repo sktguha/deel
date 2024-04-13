@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Autocomplete base 1`] = `
+exports[`Driver base 1`] = `
 <div>
   <div
     class="Autocomplete"
@@ -12,7 +12,7 @@ exports[`Autocomplete base 1`] = `
       class="input-container"
     >
       <input
-        class="input-box undefined"
+        class="input-box false"
         placeholder="autocomplete demo"
         tabindex="-1"
         type="text"
@@ -30,7 +30,77 @@ exports[`Autocomplete base 1`] = `
 </div>
 `;
 
-exports[`Driver base 1`] = `
+exports[`Driver errorText 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="error-text"
+    >
+      custom errorText for test
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box input-box-error"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Driver required 1`] = `
+<div>
+  <div
+    class="Autocomplete"
+  >
+    <div>
+      Autocomplete
+    </div>
+    <div
+      class="error-text"
+    >
+      This is a required field
+    </div>
+    <div
+      class="input-container"
+    >
+      <input
+        class="input-box input-box-error"
+        placeholder="autocomplete demo"
+        tabindex="-1"
+        type="text"
+      />
+    </div>
+    <div
+      class="selected-options"
+    />
+    <div>
+      <div
+        class="available-options-to-select"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Driver single prop 1`] = `
 <div>
   <div
     class="Autocomplete"
