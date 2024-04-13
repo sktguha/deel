@@ -63,7 +63,7 @@ export function AutoComplete({
         {selectedOptions.map((option) => {
           return (<div key={option.id} className="pill-item">
             <span>{option.label}</span>
-            <span onClick={() => removeOption(option.id)}> x</span>
+            <span onClick={() => removeOption(option.id)} className="pill-item-cross"> x</span>
           </div>);
         })}
       </div>
