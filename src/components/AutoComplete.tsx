@@ -4,7 +4,7 @@ import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
 import debounce from "../utils/debounce";
 import ErrorBoundary from "./ErrorBoundary";
-import { genericFn } from "./AutoComplete.types";
+import { AutoCompletePropTypes } from "./AutoComplete.types";
 
 
 
@@ -14,16 +14,7 @@ export function AutoComplete({
   single = false,
   errorText,
   getOptions,
-  maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange } : {
-    errorText: string,
-    single: Boolean,
-    onSelectedOptionsChange: genericFn,
-    getOptions: genericFn,
-    maxDisplayItems: number,
-    selectedOptions: any[],
-    label: string,
-    placeholder: string,
-  }) {
+  maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange } : AutoCompletePropTypes) {
   const [availableOptions, setAvailableOptions] = useState([]);
   const [loading, setLoading] = useState(false);
 
