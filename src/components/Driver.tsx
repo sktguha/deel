@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AutoComplete } from "./AutoComplete";
+import { AutoComplete } from "../types/AutoComplete";
 import { DriverPropTypes } from "./AutoComplete.types";
 
 export function Driver({ single, required, errorTextProp, maxDisplayItems, api, label }:

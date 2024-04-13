@@ -9,10 +9,13 @@ export interface AutoCompletePropTypes {
   label: string;
   placeholder?: string;
 }
+
 export interface MenuItem {
     label: string;
     id: string
-}export interface DisplayItemPropTypes {
+}
+
+export interface DisplayItemPropTypes {
   selectedOptions: MenuItem[];
   isLast: boolean;
   option: MenuItem;
@@ -20,6 +23,7 @@ export interface MenuItem {
   getBoldedText: genericFn;
   inputRef: any;
 }
+
 export interface DriverPropTypes {
   single: boolean;
   required: boolean;
