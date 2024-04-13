@@ -1,0 +1,1 @@
+export type genericFn = (...args: any[])=>any

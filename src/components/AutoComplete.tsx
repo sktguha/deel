@@ -1,9 +1,12 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
 import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
 import debounce from "../utils/debounce";
 import ErrorBoundary from "./ErrorBoundary";
+import { genericFn } from "./AutoComplete.types";
+
+
 
 export function AutoComplete({
   placeholder = "autocomplete demo",
@@ -11,7 +14,16 @@ export function AutoComplete({
   single = false,
   errorText,
   getOptions,
-  maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange }) {
+  maxDisplayItems = 12, selectedOptions = [], onSelectedOptionsChange } : {
+    errorText: string,
+    single: Boolean,
+    onSelectedOptionsChange: genericFn,
+    getOptions: genericFn,
+    maxDisplayItems: number,
+    selectedOptions: any[],
+    label: string,
+    placeholder: string,
+  }) {
   const [availableOptions, setAvailableOptions] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -19,12 +31,12 @@ export function AutoComplete({
   const itemsRef = useRef();
 
   function showItems() {
-    itemsRef.current.style.display = "block";
+    itemsRef.current && (itemsRef.current["style"]["display"] = "block" as never);
     // inputRef.current.focus();
     // if(!noFocus) itemsRef.current.focus();
   }
 
-  function removeOption(idToRemove) {
+  function removeOption(idToRemove: string) {
     onSelectedOptionsChange(selectedOptions.filter(option => option.id !== idToRemove));
   }
 
@@ -37,25 +49,23 @@ export function AutoComplete({
           <input type="text"
             className={"input-box " + (errorText && "input-box-error")}
             disabled={single && selectedOptions.length >= 1}
-            onBlur={(e) => {
-              console.log(e);
-              console.log("body blur");
+            onBlur={((e: React.UIEvent) => {
               setTimeout(() => {
-                itemsRef.current.style.display = "none"
+                (itemsRef.current) && (itemsRef.current["style"]["display"] = "none" as never);
               }, 300);
-            }} tabIndex={-1}
-            ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={debounce((e) => {
+            }) as any} tabIndex={-1}
+            ref={inputRef as any} placeholder={placeholder} onClick={() => showItems()} onChange={debounce((e: React.UIEvent) => {
               setLoading(true);
-              getOptions(e.target.value).then((options) => {
+              getOptions((e.target as unknown as {"value": any}).value).then((options: any[]) => {
                 setLoading(false)
-                const text = e.target.value;
+                const text = (e.target as unknown as {"value": any});
                 console.log(text);
                 console.log(options);
                 const availOptions = options.filter(option => option.label.toLowerCase().indexOf(text.toLowerCase()) !== -1);
                 console.log(availOptions);
-                setAvailableOptions(availOptions);
+                setAvailableOptions(availOptions as never[]);
                 showItems();
-              }, (err) => {
+              }, (err: React.UIEvent) => {
                 // here can integrate with a logging library
                 console.error("error occured: ", err);
               });
