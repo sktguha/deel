@@ -3,6 +3,7 @@ import { ItemsDisplay } from "./ItemsDisplay";
 import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
 import debounce from "../utils/debounce";
+import ErrorBoundary from "./ErrorBoundary";
 
 export function AutoComplete({
   placeholder = "autocomplete demo",
