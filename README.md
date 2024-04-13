@@ -1,6 +1,6 @@
 # Getting Started with Autocomplete
 
-Please refer to the loom video for demo and detailed code structure walkthrough: 
+Please refer to the below loom video for demo and detailed code structure walkthrough: 
 
 https://www.loom.com/share/29a6e6a9b472479a9522a1fcfb10c00e?sid=529974c5-ec74-41a0-aa3c-3f3f05bb6e32
 
