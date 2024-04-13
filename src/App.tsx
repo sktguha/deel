@@ -5,7 +5,7 @@ import { Driver } from "./components/Driver";
 
 export default function App(){
   return <div className="main-container">
-    <h2>Autocomplete Demo ( 6 use cases). type "h" or "he" to get results</h2>
+    <h2>Autocomplete Demo ( 7 use cases). type "h" or "he" to get results</h2>
     <section>
       <h2>1. Base example</h2>
       <Driver />
@@ -29,6 +29,10 @@ export default function App(){
     <section>
       <h2>6. Custom errorText example according to custom logic( critical in form validations , form library integrations etc)</h2>
       <Driver errorTextProp="Customised error text according to custom form logic"/>
+    </section>
+    <section>
+      <h2>7. Required field example with single option allowed ( critical in form validations , form library integrations etc)</h2>
+      <Driver single required/>
     </section>
   </div>
   
