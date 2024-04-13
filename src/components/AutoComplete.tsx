@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { ItemsDisplay } from "./ItemsDisplay";
 import loader from "../loader.gif"
 import getBoldedText from "../utils/getBoldedText";
+import debounce from "../utils/debounce";
 
 export function AutoComplete({
   placeholder = "autocomplete demo",
@@ -41,7 +42,7 @@ export function AutoComplete({
             itemsRef.current.style.display = "none"
           }, 300);
         }} tabIndex={-1}
-        ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={(e) => {
+        ref={inputRef} placeholder={placeholder} onClick={() => showItems(true)} onChange={debounce((e) => {
           setLoading(true);
           getOptions(e.target.value).then((options) => {
             setLoading(false)
@@ -56,7 +57,7 @@ export function AutoComplete({
             // here can integrate with a logging library
             console.error("error occured: ", err);
           });
-        }} />
+        })} />
         {loading && <img width="33" height="33" src={loader} />}
       </div>
       {/* {JSON.stringify(selectedOptions)} */}
