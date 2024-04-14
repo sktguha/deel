@@ -3,7 +3,7 @@
 Give an example where it might break my app.
 
 **ANSWER:**<br>
-So a Component is of course a standard React component with lifecycle methods. A pure component is essentially extra functionality on top of a component, where it blocks rerenders if a shallow comparision of the props and state returns them equal. Important thing is that its a shallow comparision. so if any property is changed at a nested level, it may easily miss it . so in such cases we need to define our own shouldComponentUpdate method
+So a Component is of course a standard React component with lifecycle methods or a functional component. A pure component is essentially extra functionality on top of a component, where it blocks rerenders if a shallow comparision of the props and state returns them equal. Important thing is that its a shallow comparision. so if any property is changed at a nested level, it may easily miss it . so in such cases we need to define our own shouldComponentUpdate method
 
 An example where it might break an app is, if we consider a TodoList component that has implemented pureComponet and it gets a todos prop which is an array. If the app pushes the new item to todos[], then the purecomponent won't get updated as the todos references hasn't changed.
 One way of course is to update the todos[] reference itself, like [newTodo, ...todos] , but still its better not to use the pureComponent in the first place as it doesn't make sense here
