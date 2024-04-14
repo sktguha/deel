@@ -23,8 +23,6 @@ export function AutoComplete({
 
   function showItems() {
     itemsRef.current && (itemsRef.current["style"]["display"] = "block" as never);
-    // inputRef.current.focus();
-    // if(!noFocus) itemsRef.current.focus();
   }
 
   function removeOption(idToRemove: string) {
@@ -63,7 +61,6 @@ export function AutoComplete({
             })} />
           {loading && <img width="33" height="33" src={loader} />}
         </div>
-        {/* {JSON.stringify(selectedOptions)} */}
         <div className="selected-options">
           {selectedOptions.map((option) => {
             return (<div key={option.id} className="pill-item">
@@ -73,11 +70,9 @@ export function AutoComplete({
           })}
         </div>
         <div onClick={() => {
-          // alert("onclick");
         }}>
           <ItemsDisplay {...{ itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef }} />
         </div>
-        {/* {ItemsDisplay(itemsRef, availableOptions, maxDisplayItems, selectedOptions, onSelectedOptionsChange, getBoldedText, inputRef)} */}
       </div>
     </ErrorBoundary>
   );
